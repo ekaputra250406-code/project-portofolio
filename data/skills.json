@@ -1,0 +1,15 @@
+[
+  { "name": "HTML5", "level": 60, "category": "Frontend" },
+  { "name": "CSS3", "level": 55, "category": "Frontend" },
+  { "name": "Tailwind CSS", "level": 50, "category": "Frontend" },
+  { "name": "Python", "level": 55, "category": "Backend" },
+  { "name": "Flask", "level": 45, "category": "Backend" },
+  { "name": "SQLite", "level": 40, "category": "Database" },
+  { "name": "Git", "level": 40, "category": "Tools" },
+  { "name": "Linux", "level": 35, "category": "Tools" },
+  { "name": "VS Code", "level": 55, "category": "Tools" },
+  { "name": "JavaScript", "level": 35, "category": "Learning" },
+  { "name": "MySQL", "level": 35, "category": "Learning" },
+  { "name": "Jinja2", "level": 45, "category": "Learning" },
+  { "name": "React", "level": 20, "category": "Learning" }
+]

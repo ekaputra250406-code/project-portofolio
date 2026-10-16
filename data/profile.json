@@ -1,0 +1,34 @@
+{
+  "name": "Hidayat Eka Saputra",
+  "nickname": "Hidayat",
+  "role": "Informatics Student & Software Engineer Enthusiast",
+  "tagline": "Membangun sistem, mendokumentasikan kode.",
+  "bio_short": "Mahasiswa Informatika yang berfokus pada rekayasa perangkat lunak dan integrasi sistem.",
+  "bio_long": "Saya adalah mahasiswa Informatika di Universitas Nahdlatul Ulama Yogyakarta yang berasal dari Desa Air Panas, Rokan Hulu, Riau. Lahir pada 25 April 2006, saya memiliki minat besar terhadap rekayasa perangkat lunak dan integrasi sistem. Berbekal pendekatan pembelajaran yang praktis, saya senang mengeksplorasi teknologi baru dan mengubahnya menjadi solusi nyata. Portofolio ini adalah kanvas digital tempat saya mendokumentasikan setiap baris kode, eksperimen, dan proyek yang saya bangun.",
+  "birth": {
+    "date": "2006-04-25",
+    "place": "Rokan Hulu, Riau"
+  },
+  "location": {
+    "origin": "Desa Air Panas, Rokan Hulu, Riau",
+    "current": "Yogyakarta, Indonesia"
+  },
+  "education": {
+    "university": "Universitas Nahdlatul Ulama Yogyakarta",
+    "major": "Informatika",
+    "status": "Mahasiswa Aktif"
+  },
+  "interests": [
+    "Software Engineering",
+    "System Integration",
+    "Web Development",
+    "UI/UX Design"
+  ],
+  "contact": {
+    "email": "ekaputra250406@gmail.com",
+    "github": "https://github.com/ekaputra250406-code",
+    "instagram": "https://instagram.com/eka.putrraa",
+    "tiktok": "https://tiktok.com/@eka.putrraa",
+    "whatsapp": "https://wa.me/6281374523231"
+  }
+}

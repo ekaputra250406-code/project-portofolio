@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Aplikasi Keuangan",
+    "slug": "aplikasi-keuangan",
+    "tagline": "Kelola keuangan pribadi dengan transparan.",
+    "description": "Aplikasi web manajemen keuangan pribadi untuk mencatat pemasukan, pengeluaran, dan memantau kondisi finansial secara transparan.",
+    "long_description": "Aplikasi ini terinspirasi dari problem pribadi saya dalam mengelola keuangan sehari-hari. Banyak orang kesulitan melacak ke mana uang mereka pergi, dan aplikasi ini hadir sebagai solusi praktis. Di dalamnya, pengguna dapat mencatat pemasukan dan pengeluaran, melihat ringkasan kondisi finansial secara transparan, serta memanfaatkan berbagai fitur pendukung lainnya. Dibangun dengan pendekatan yang fokus pada kegunaan nyata: sederhana dipakai, jelas dibaca, dan dapat diandalkan untuk keputusan finansial sehari-hari.",
+    "highlights": [
+      "Pencatatan pemasukan & pengeluaran",
+      "Ringkasan kondisi finansial transparan",
+      "Kategorisasi transaksi",
+      "Riwayat dan laporan sederhana"
+    ],
+    "tech": ["Python", "Flask", "SQLite", "Tailwind CSS", "Jinja2"],
+    "thumbnail": "projects/aplikasi-keuangan.jpg",
+    "github": "",
+    "demo": "",
+    "year": 2025,
+    "featured": true,
+    "status": "completed",
+    "category": "Web App"
+  },
+  {
+    "id": 2,
+    "title": "Blog Belajar",
+    "slug": "blog-belajar",
+    "tagline": "Mendokumentasikan proses belajar, satu catatan setiap waktu.",
+    "description": "Aplikasi web untuk mencatat pelajaran dan catatan pribadi, berfungsi sebagai kanvas digital untuk mendokumentasikan proses belajar.",
+    "long_description": "Blog Belajar terinspirasi dari kebutuhan saya sendiri untuk mencatat pelajaran atau catatan yang saya pelajari. Sering kali, ilmu yang sudah dipelajari menguap begitu saja karena tidak terdokumentasi. Aplikasi ini hadir untuk mengubah kebiasaan itu: setiap catatan kecil, rangkuman topik, dan eksperimen belajar tersimpan rapi dan mudah diakses kembali. Dibangun agar ringan, cepat, dan menyenangkan untuk digunakan setiap hari.",
+    "highlights": [
+      "Tulis & kelola catatan belajar",
+      "Kategorisasi topik",
+      "Pencarian catatan",
+      "Antarmuka ringan & cepat"
+    ],
+    "tech": ["Python", "Flask", "SQLite", "Bootstrap", "Jinja2"],
+    "thumbnail": "projects/blog-belajar.jpg",
+    "github": "",
+    "demo": "",
+    "year": 2025,
+    "featured": true,
+    "status": "completed",
+    "category": "Web App"
+  },
+  {
+    "id": 3,
+    "title": "Detektor Jari",
+    "slug": "detektor-jari",
+    "tagline": "Eksperimen computer vision: melihat gerakan jari secara real-time.",
+    "description": "Proyek eksperimen computer vision untuk mendeteksi dan melacak jari secara real-time menggunakan kamera.",
+    "long_description": "Detektor Jari adalah hasil 'gabut' saya — eksperimen iseng yang ternyata menjadi sarana belajar yang menyenangkan. Proyek ini mendeteksi dan melacak jari menggunakan computer vision, membuka pintu pemahaman tentang bagaimana komputer 'melihat' dan memahami gerakan manusia. Meskipun sederhana, proyek ini menjadi titik awal eksplorasi bidang computer vision dan interaksi manusia-komputer, sekaligus pengingat bahwa ide-ide terbaik sering muncul dari rasa penasaran yang sederhana.",
+    "highlights": [
+      "Deteksi jari real-time",
+      "Pelacakan gerakan tangan",
+      "Berbasis kamera",
+      "Eksperimen computer vision"
+    ],
+    "tech": ["Python", "OpenCV", "MediaPipe"],
+    "thumbnail": "projects/detektor-jari.jpg",
+    "github": "",
+    "demo": "",
+    "year": 2025,
+    "featured": true,
+    "status": "completed",
+    "category": "Computer Vision"
+  }
+]

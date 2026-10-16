@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ project.title }}{% endblock %}
+
+{% block content %}
+
+<section class="container mx-auto px-6 py-20 max-w-4xl">
+
+    <a href="{{ url_for('projects') }}" class="text-cyan-400 text-sm hover:underline">
+        ← Kembali ke Projects
+    </a>
+
+    <div class="mt-8 mb-12">
+        <div class="flex items-center gap-3 mb-4">
+            <span class="text-xs font-mono text-cyan-400 tracking-widest uppercase glass px-3 py-1 rounded-full">
+                {{ project.category }}
+            </span>
+            <span class="text-xs font-mono text-gray-500">{{ project.year }}</span>
+            {% if project.status == 'in-progress' %}
+            <span class="text-xs font-mono text-yellow-400 glass px-3 py-1 rounded-full">In Progress</span>
+            {% endif %}
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ project.title }}</h1>
+        <p class="text-xl text-cyan-400/80 italic">{{ project.tagline }}</p>
+    </div>
+
+    <div class="glass-strong rounded-2xl p-8 md:p-10 mb-8">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-3">
+            <span class="w-1 h-6 bg-cyan-400 rounded"></span>
+            Tentang Proyek
+        </h2>
+        <p class="text-gray-300 leading-relaxed">{{ project.long_description }}</p>
+    </div>
+
+    {% if project.highlights %}
+    <div class="glass rounded-2xl p-8 mb-8">
+        <h2 class="text-xl font-bold mb-6 flex items-center gap-3">
+            <span class="w-1 h-6 bg-cyan-400 rounded"></span>
+            Fitur Utama
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {% for item in project.highlights %}
+            <li class="flex items-start gap-3 text-gray-300">
+                <span class="text-cyan-400 mt-1">▸</span>
+                <span>{{ item }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <div class="glass rounded-2xl p-8 mb-8">
+        <h2 class="text-xl font-bold mb-6 flex items-center gap-3">
+            <span class="w-1 h-6 bg-cyan-400 rounded"></span>
+            Tech Stack
+        </h2>
+        <div class="flex flex-wrap gap-2">
+            {% for tech in project.tech %}
+            <span class="glass px-4 py-2 rounded-lg text-sm">{{ tech }}</span>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% if project.github or project.demo %}
+    <div class="flex flex-wrap gap-4">
+        {% if project.github %}
+        <a href="{{ project.github }}" target="_blank"
+           class="glass-strong px-6 py-3 rounded-lg text-cyan-400 hover:neon-glow-cyan transition-all duration-300">
+            Lihat di GitHub →
+        </a>
+        {% endif %}
+        {% if project.demo %}
+        <a href="{{ project.demo }}" target="_blank"
+           class="glass-strong px-6 py-3 rounded-lg text-cyan-400 hover:neon-glow-cyan transition-all duration-300">
+            Lihat Demo →
+        </a>
+        {% endif %}
+    </div>
+    {% endif %}
+
+</section>
+
+{% endblock %} -->

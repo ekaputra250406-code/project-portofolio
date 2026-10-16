@@ -1,43 +1,73 @@
 @import "tailwindcss";
 
 /* ============================================
-   THEME CONFIG — Tailwind v4 pakai @theme
+   THEME CONFIG
    ============================================ */
 @theme {
-  /* Warna neon */
   --color-neon-cyan: #00f0ff;
   --color-neon-purple: #b537f2;
   --color-neon-pink: #ff2e97;
   --color-neon-green: #39ff14;
 
-  /* Dark mode base */
   --color-dark-bg: #0a0a0f;
   --color-dark-surface: #12121a;
   --color-dark-border: #1f1f2e;
 
-  /* Glassmorphism */
   --color-glass-bg: rgba(255, 255, 255, 0.05);
   --color-glass-border: rgba(255, 255, 255, 0.1);
 
-  /* Font */
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+}
 
-  /* Animasi */
-  --animate-swing: swing 4s ease-in-out infinite;
+/* ============================================
+   PAGE TRANSITION
+   ============================================ */
+body {
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
+}
+body.page-loaded { opacity: 1; }
+body.page-exit { opacity: 0; }
+
+/* ============================================
+   HOME — No Scroll ONLY di desktop
+   ============================================ */
+@media (min-width: 1024px) {
+  body.no-scroll {
+    overflow: hidden !important;
+    height: 100vh;
+    max-height: 100vh;
+  }
+
+  body.no-scroll main {
+    height: calc(100vh - 64px);
+    overflow: hidden;
+  }
 }
 
 /* ============================================
    KEYFRAMES
    ============================================ */
-@keyframes swing {
-  0%, 100% { transform: rotate(-4deg); }
-  50% { transform: rotate(4deg); }
+@keyframes lanyard-fall {
+  0% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  55% { transform: translateY(-30px); }
+  70% { transform: translateY(0); }
+  80% { transform: translateY(-12px); }
+  90% { transform: translateY(0); }
+  100% { transform: translateY(0); }
 }
 
-@keyframes swing-card {
-  0%, 100% { transform: rotate(-2deg) translateY(0); }
-  50% { transform: rotate(2deg) translateY(-4px); }
+@keyframes lanyard-swing {
+  0%, 100% { transform: rotate(-3.5deg); }
+  50% { transform: rotate(3.5deg); }
 }
 
 @keyframes glow-pulse {
@@ -103,6 +133,7 @@
                  0 0 20px rgba(0, 240, 255, 0.5);
   }
 
+  /* Tali lanyard */
   .lanyard-strap {
     background: linear-gradient(
       180deg,
@@ -115,17 +146,41 @@
     border: 1px solid rgba(255, 255, 255, 0.15);
   }
 
-  .animate-swing {
-    animation: var(--animate-swing);
+  /* Tinggi tali — responsif (+5vh dari sebelumnya) */
+  .lanyard-strap-dynamic {
+    height: 20vh;
+  }
+
+  @media (min-width: 768px) {
+    .lanyard-strap-dynamic {
+      height: 30vh;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lanyard-strap-dynamic {
+      height: 40vh;
+    }
+  }
+
+  .lanyard-container {
+    transform-origin: top center;
+    animation:
+      lanyard-fall 1.8s cubic-bezier(0.34, 1.2, 0.64, 1) 1,
+      lanyard-swing 4s ease-in-out 1.8s infinite;
+  }
+
+  .lanyard-card {
     transform-origin: top center;
   }
-  .animate-swing-card {
-    animation: swing-card 4s ease-in-out infinite;
-  }
+
   .animate-glow-pulse {
     animation: glow-pulse 2s ease-in-out infinite;
   }
 
-  .perspective-1500 { perspective: 1500px; }
-  .transform-style-3d { transform-style: preserve-3d; }
+  /* Break long text (email, URL) */
+  .break-anywhere {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
 }

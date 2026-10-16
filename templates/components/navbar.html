@@ -1,0 +1,83 @@
+<nav class="glass sticky top-0 z-50 px-6 py-4">
+    <div class="container mx-auto flex justify-between items-center">
+
+        <a href="{{ url_for('index') }}" class="text-xl font-bold neon-text-cyan">
+            Hidayat.
+        </a>
+
+        <ul class="hidden md:flex gap-6 text-sm">
+            <li>
+                <a href="{{ url_for('index') }}"
+                   class="transition-colors duration-300 {% if request.endpoint == 'index' %}text-cyan-400 neon-text-cyan{% else %}text-gray-400 hover:text-cyan-400{% endif %}">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('about') }}"
+                   class="transition-colors duration-300 {% if request.endpoint == 'about' %}text-cyan-400 neon-text-cyan{% else %}text-gray-400 hover:text-cyan-400{% endif %}">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('projects') }}"
+                   class="transition-colors duration-300 {% if request.endpoint in ['projects', 'project_detail'] %}text-cyan-400 neon-text-cyan{% else %}text-gray-400 hover:text-cyan-400{% endif %}">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('skills') }}"
+                   class="transition-colors duration-300 {% if request.endpoint == 'skills' %}text-cyan-400 neon-text-cyan{% else %}text-gray-400 hover:text-cyan-400{% endif %}">
+                    Skills
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('contact') }}"
+                   class="transition-colors duration-300 {% if request.endpoint == 'contact' %}text-cyan-400 neon-text-cyan{% else %}text-gray-400 hover:text-cyan-400{% endif %}">
+                    Contact
+                </a>
+            </li>
+        </ul>
+
+        <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-cyan-400 transition-colors">
+            <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+    </div>
+
+    <ul id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-white/10 space-y-3 text-sm">
+        <li>
+            <a href="{{ url_for('index') }}"
+               class="block py-2 {% if request.endpoint == 'index' %}text-cyan-400 neon-text-cyan{% else %}text-gray-400 hover:text-cyan-400{% endif %}">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('about') }}"
+               class="block py-2 {% if request.endpoint == 'about' %}text-cyan-400 neon-text-cyan{% else %}text-gray-400 hover:text-cyan-400{% endif %}">
+                About
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('projects') }}"
+               class="block py-2 {% if request.endpoint in ['projects', 'project_detail'] %}text-cyan-400 neon-text-cyan{% else %}text-gray-400 hover:text-cyan-400{% endif %}">
+                Projects
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('skills') }}"
+               class="block py-2 {% if request.endpoint == 'skills' %}text-cyan-400 neon-text-cyan{% else %}text-gray-400 hover:text-cyan-400{% endif %}">
+                Skills
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('contact') }}"
+               class="block py-2 {% if request.endpoint == 'contact' %}text-cyan-400 neon-text-cyan{% else %}text-gray-400 hover:text-cyan-400{% endif %}">
+                Contact
+            </a>
+        </li>
+    </ul>
+</nav>
